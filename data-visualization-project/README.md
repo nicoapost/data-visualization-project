@@ -2,7 +2,7 @@
 
 The theme for this project is my percieved changes since the start of 2020 / COVID drama. The data is largely subjective or made up.  
 
-## First Visualizatin: Pie Chart
+## First Visualization: Pie Chart
 
 Shows GPA breakdown in Winter 2020  
 
