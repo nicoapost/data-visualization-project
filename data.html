@@ -5,26 +5,36 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div id="pieChart"></div>
-        <!-- Script for pie chart -->
-        <script src="./scripts/pie.js"></script>
+        <div id="wrapper">
+            <div id="header"><h1>Changes Since ~The Rona~</h1></div>
+            <div id="pieChart"><h2>Breakdown of Student GPA in Winter, 2019</h2></div>
+            <!-- Script for pie chart -->
+            <script src="./scripts/pie.js"></script>
 
-        <!-- 
-            <div id="histogram"></div>
-            <!-- Script for histogram -->
-            <script src="./scripts/histogram.js"></script>
+            <!-- 
+                <div id="histogram"></div>
+                <!-- Script for histogram -->
+                <script src="./scripts/histogram.js"></script>
 
-            <div id="foodPyramid"></div>
-            <!-- Script for food pyramid -->
-            <script src="./scripts/pyramid.js"></script>
+                <div id="foodPyramid"></div>
+                <!-- Script for food pyramid -->
+                <script src="./scripts/pyramid.js"></script>
 
-            <div id="bubble"></div>
-            <!-- Script for bubble chart -->
-            <script src="./scripts/bubble.js"></script> 
-        -->
+                <div id="bubble"></div>
+                <!-- Script for bubble chart -->
+                <script src="./scripts/bubble.js"></script> 
+            -->
+            <div id="footButtons">
+                <button onclick="showOne()"> Data Visualization 1 </button>
+                <button onclick="showTwo()"> Data Visualization 2 </button>
+                <button onclick="showThree()"> Data Visualization 3 </button>
+                <button onclick="showFour()"> Data Visualization 4 </button>
+            </div>
+        </div>
 
     </body>
 

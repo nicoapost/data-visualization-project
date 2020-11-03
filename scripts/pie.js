@@ -1,10 +1,14 @@
+
+
+// SET EACH SLICE TO EXPAND WHEN HOVERED??
+
 // set the dimensions and margins of the graph
-var width = 450
-height = 450
-margin = 40
+var width = 700
+height = 700
+margin = 40;
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
-var radius = Math.min(width, height) / 2 - margin
+var radius = Math.min(width, height) / 2 - margin;
 
 // append the svg object to the div called 'pieChart'
 var svg = d3.select("#pieChart")
@@ -16,24 +20,25 @@ var svg = d3.select("#pieChart")
 
 // Create dummy data
 var data = {
-    a: 10,
-    b: 20,
-    c: 40,
-    d: 10,
-    e: 20
-}
+    a: 2,
+    b: 7,
+    c: 50,
+    d: 40
+};
 
-// set the color scale
+
 var color = d3.scaleOrdinal()
     .domain(data)
-    .range(["#00FFFF", "#7FFFD4", "#1E90FF", "#008B8B", "#00CED1"])
+    .range(["#FF6060", "#FF9C60", "#BCFF60", "#25FF17"]);
+
+
 
 // Compute the position of each group on the pie:
 var pie = d3.pie()
     .value(function(d) {
         return d.value;
-    })
-var data_ready = pie(d3.entries(data))
+    });
+var data_ready = pie(d3.entries(data));
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 svg
@@ -46,8 +51,9 @@ svg
         .outerRadius(radius)
     )
     .attr('fill', function(d) {
+        console.log(d);
         return (color(d.data.key))
     })
-    .attr("stroke", "black")
-    .style("stroke-width", "2px")
-    .style("opacity", 0.7)
+    .attr("stroke", "#878787")
+    .style("stroke-width", "3px")
+    .style("opacity", 0.7);
