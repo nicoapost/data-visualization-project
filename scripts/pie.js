@@ -18,7 +18,7 @@ var svg = d3.select("#pieChart")
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-// Create dummy data
+// Create data
 var data = {
     a: 2,
     b: 7,
@@ -31,8 +31,6 @@ var color = d3.scaleOrdinal()
     .domain(data)
     .range(["#FF6060", "#FF9C60", "#BCFF60", "#25FF17"]);
 
-
-
 // Compute the position of each group on the pie:
 var pie = d3.pie()
     .value(function(d) {
@@ -41,8 +39,7 @@ var pie = d3.pie()
 var data_ready = pie(d3.entries(data));
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-svg
-    .selectAll('whatever')
+svg.selectAll('whatever')
     .data(data_ready)
     .enter()
     .append('path')
@@ -51,7 +48,7 @@ svg
         .outerRadius(radius)
     )
     .attr('fill', function(d) {
-        console.log(d);
+        console.log(data_ready);
         return (color(d.data.key))
     })
     .attr("stroke", "#878787")
