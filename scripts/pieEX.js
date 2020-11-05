@@ -29,29 +29,50 @@ var pie = d3.pie()
 var data_ready = pie(d3.entries(data));
 
 
+
+
+
 // shape helper to build arcs:
-var arcGenerator = d3.arc()
+var arc = d3.arc()
   .innerRadius(0)
   .outerRadius(radius);
 
+var arcOver = d3.arc()
+  .innerRadius(0)
+  .outerRadius(radius + 35);
+
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+
+// To get GPA ranges
+let count = -1;
+
+
 svg
   .selectAll('mySlices')
   .data(data_ready)
   .enter()
   .append('path')
-    .attr('d', arcGenerator)
+    .attr('d', arc)
     .attr('fill', function(d){ return(color(d.data.key)) })
     .attr("stroke", "black")
     .style("stroke-width", "2px")
-    .style("opacity", 0.7);
+    .style("opacity", 0.7)
+  .on("mouseover", function(d) {
+    d3.select(this).transition()
+        .duration(1000)
+        .attr("d", arcOver);
+    })
+  .on("mouseout", function(d) {
+    d3.select(this).transition()
+        .duration(1000)
+        .attr("d", arc);
+    });
 
 // Now add the annotation. Use the centroid method to get the best coordinates
 
-// To get GPA ranges
-let count = -1;
 
-svg
+
+svg 
   .selectAll('mySlices')
   .data(data_ready)
   .enter()
@@ -59,7 +80,7 @@ svg
   .text(function(d){ 
       count++;
       return `${count} - ${count + 1}`;
-    })
-  .attr("transform", function(d) { return `translate(${arcGenerator.centroid(d)})`; })
+  })
+  .attr("transform", function(d) { return `translate(${arc.centroid(d)})`; })
   .style("text-anchor", "middle")
-  .style("font-size", 17);
+  .style("font-size", 19);
