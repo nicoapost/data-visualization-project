@@ -6,38 +6,61 @@
 
         <!-- Load d3.js -->
         <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./scripts/script.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="./images/candy.png">
     </head>
 
     <body>
-        <div id="wrapper">
-            <div id="header"><h1>Changes Since ~The Rona~</h1></div>
-            <div id="pieChart"><h2>Breakdown of Student GPA in Winter, 2019</h2></div>
-            <!-- Script for pie chart -->
-            <script src="./scripts/pieEX.js"></script>
+        <div id="outerWrapper">
+            <div id="leftWrapper">
+                <a onclick="hideAllCharts(); $('#pieChart').fadeIn();"> <div id="pieChartButton" class="buttonBox"></div> </a>
+                <a onclick="hideAllCharts(); $('#histogram').fadeIn();"> <div id="histogramButton" class="buttonBox"></div> </a>
+            </div>
+            <div id="bigDisplayWrapper">
+                <div id="header"><h1>Changes Since ~The Rona~</h1></div>
+                
+                <div id="pieChart" class="dataVisualization">
+                    <h2>Breakdown of Student GPA</h2>
+                    <br>
+                    <h3> Winter, 2019</h3>
+                </div>
+                <!-- Script for pie chart -->
+                <script src="./scripts/pieEX.js"></script>
+                
 
-            
-            <div id="histogram"></div>
-            <!-- Script for histogram -->
-            <script src="./scripts/histogram.js"></script>
+                <div id="histogram" class="dataVisualization" hidden="true">
+                    <h2>Internet Traffic by Time of Day</h2>
+                    <br> 
+                    <h3>October, 2020</h3>
+                </div>
+                <!-- Script for histogram -->
+                <script src="./scripts/histogram.js"></script>
+    
 
-            <div id="foodPyramid"></div>
-            <!-- Script for food pyramid -->
-            <script src="./scripts/pyramid.js"></script>
+                <div id="foodPyramid" class="dataVisualization" hidden="true">
+                    <h2>Personal Food Pyramid</h2>
+                    <br> 
+                    <h3>October, 2020</h3>
+                </div>
+                <!-- Script for food pyramid -->
+                <script src="./scripts/pyramid.js"></script>
+    
 
-            <div id="bubble"></div>
-            <!-- Script for bubble chart -->
-            <script src="./scripts/bubble.js"></script> 
-           
-            <div id="footButtons">
-                <button onclick="showOne()"> Data Visualization 1 </button>
-                <button onclick="showTwo()"> Data Visualization 2 </button>
-                <button onclick="showThree()"> Data Visualization 3 </button>
-                <button onclick="showFour()"> Data Visualization 4 </button>
+                <div id="bubble" class="dataVisualization" hidden="true">
+                    <h2>College Student Vocabulary Breakdown</h2>
+                    <br> 
+                    <h3>2020, Overall</h3>
+                </div>
+                <!-- Script for bubble chart -->
+                <script src="./scripts/bubble.js"></script> 
+            </div>
+            <div id="rightWrapper">
+                <a onclick="hideAllCharts(); $('#foodPyramid').fadeIn();"> <div id="foodPyramidButton" class="buttonBox"></div> </a>
+                <a onclick="hideAllCharts(); $('#bubble').fadeIn();"> <div id="bubbleButton" class="buttonBox"></div> </a>
             </div>
         </div>
-
     </body>
 
 </html>
