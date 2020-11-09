@@ -1,4 +1,4 @@
-function hideAllCharts() {
+function transition(element) {
     $('.dataVisualization').fadeOut();
-    // $(this).fadeIn(600);
+    $(element).delay(400).fadeIn();
 }

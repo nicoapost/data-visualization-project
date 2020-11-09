@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
-var width = 700
-    height = 700
+var width = 650,
+    height = 650,
     margin = 40;
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.

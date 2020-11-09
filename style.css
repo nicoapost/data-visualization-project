@@ -84,9 +84,9 @@ polyline{
     top: 40%;
 }
 
-#histogramButton, #bubbleButton {
+#bubbleButton {
     position: relative;
-    top: 50%;
+    top: 45%;
 }
 
 #pieChartButton {
@@ -94,9 +94,19 @@ polyline{
     top: 40%;
     background-image: url('./images/pie.png');
     background-size: contain;
+    
+}
+
+#histogramButton {
+    position: relative;
+    top: 45%;
+    background-image: url('./images/histogram.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h2, h3 {
-    margin: 0;
-    padding: 0;
+    margin: -5px;
+    padding: -5px;
 }
