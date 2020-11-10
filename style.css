@@ -110,3 +110,11 @@ h2, h3 {
     margin: -5px;
     padding: -5px;
 }
+
+bar:hover {
+    fill:red;
+}
+
+.bar rect:hover {
+    fill: orangered;
+  }
