@@ -22,6 +22,10 @@ div {
     box-sizing: border-box;
     position: relative;
 }
+.dataVisualization {
+    text-align: center;
+    margin: auto;
+}
 
 #outerWrapper {
     width: 100%;
@@ -82,11 +86,19 @@ polyline{
 #foodPyramidButton {
     position: relative;
     top: 40%;
+    background-image: url('./images/food-pyramid-icon.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #bubbleButton {
     position: relative;
     top: 45%;
+    background-image: url('./images/bubbles-icon.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #pieChartButton {
@@ -111,10 +123,54 @@ h2, h3 {
     padding: -5px;
 }
 
-bar:hover {
-    fill:red;
+#foodPyramid {
+    width: 650px;
+    height: 650px;
+    background-image: url('./images/food-pyramid-whole.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.bar rect:hover {
-    fill: orangered;
-  }
+.pyramid-level {
+    box-sizing: absolute;
+}
+
+.pyramid-level:hover {
+    cursor: pointer;
+}
+
+#yellow {
+    height: 110px;
+    width: 160px;
+    margin: auto;
+    top: 93px;
+}
+
+#blue {
+    height: 75px;
+    width: 290px;
+    margin: auto;
+    top: 96px;
+}
+
+#green {
+    height: 77px;
+    width: 420px;
+    margin: auto;
+    top: 102px;
+}
+
+#red {
+    height: 79px;
+    width: 555px;
+    margin: auto;
+    top: 108px;
+}
+
+#bubble {
+    background-image: url('./images/bubbles.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}

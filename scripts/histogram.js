@@ -34,8 +34,6 @@ var histogram = d3.histogram()
 // And apply this function to data to get the bins
 var bins = histogram(data);
 
-console.log(bins);
-
 // Y axis: scale and draw:
 var y = d3.scaleLinear()
     .domain([0, 101000])
