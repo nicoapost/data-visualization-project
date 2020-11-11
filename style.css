@@ -174,3 +174,68 @@ h2, h3 {
     background-repeat: no-repeat;
     background-position: center bottom;
 }
+
+
+#key {
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    width: 25%;
+    height: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    bottom: 0;
+    left: -45px;
+    overflow: auto;
+}
+
+
+.key-item-wrap {
+    position: relative;
+    height: 13%;
+    width: 60%;
+    margin: auto;
+    float: left;
+    margin: 5px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.key-item-wrap h4 {
+    margin-top: 7px;
+    margin-left: 45px;
+}
+
+.key-item {
+    position: absolute;
+    height: 0;
+    width: 25%;
+    padding-top: 25%;
+    margin: 3px;
+    left: 0px;
+    top: 0px;
+}
+
+#swear {
+    background-color: red;
+}
+
+
+
+#health {
+    background-color: blue;
+}
+
+#finance {
+    background-color: green;
+}
+
+#school {
+    background-color: rgb(165, 87, 42);
+}
+
+#leisure {
+    background-color: purple;
+}
