@@ -101,6 +101,13 @@ polyline{
     background-position: center;
 }
 
+#bubble img {
+    margin: auto;
+    height: 650px;
+    width: 650px;
+
+}
+
 #pieChartButton {
     position: relative;
     top: 40%;
@@ -168,13 +175,6 @@ h2, h3 {
     top: 108px;
 }
 
-#bubble {
-    background-image: url('./images/bubbles.png');
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
 
 #key {
     position: absolute;
@@ -189,6 +189,7 @@ h2, h3 {
     bottom: 0;
     left: -45px;
     overflow: auto;
+    z-index: 2;
 }
 
 
